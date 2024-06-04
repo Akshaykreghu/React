@@ -22,6 +22,11 @@ const initialFriends = [
 ];
 
 const App = () => {
+  const [friends, setFriends] = useState(initialFriends);
+  const handleSetFriends =(newFriend)=>{
+    setFriends(friends => [...friends, newFriend]);
+    console.log('newFriend', newFriend);
+  }
   const [addFriendForm, setAddFriendForm] = useState(false);
   const handleAddFriend = () => {
     setAddFriendForm((addFriendForm) => !addFriendForm);
@@ -30,8 +35,8 @@ const App = () => {
   return (
     <div className="app">
       <div className="sidebar">
-        <FriendsList />
-        {addFriendForm && <FormAddFriend />}
+        <FriendsList friends={friends} />
+        {addFriendForm && <FormAddFriend handleSetFriends={handleSetFriends}/>}
         <Button onClick={handleAddFriend}>{buttonContent}</Button>
       </div>
       <FormSplitBill />
@@ -39,8 +44,7 @@ const App = () => {
   );
 };
 
-const FriendsList = () => {
-  const friends = initialFriends;
+const FriendsList = ({ friends }) => {
   return (
     <ul>
       {friends.map((friend) => (
@@ -71,7 +75,7 @@ const Friend = ({ friend }) => {
   );
 };
 
-const FormAddFriend = () => {
+const FormAddFriend = ({handleSetFriends}) => {
   const [name, setName] = useState("");
   const [image, setImage] = useState("https://i.pravatar.cc/48?u=");
   const handleSubmit = (event) => {
@@ -83,6 +87,7 @@ const FormAddFriend = () => {
       balance: 0,
       id: crypto.randomUUID(),
     };
+    handleSetFriends(newFriend);
     console.log("newFriend", newFriend);
 
     setName("");
