@@ -157,13 +157,13 @@ const FormSplitBill = ({ selectedFriend, onSplitBill }) => {
       <h2>Split a bill with {selectedFriend.name}</h2>
       <label>💰Bill value</label>
       <input
-        type="text"
+        type="number"
         value={bill}
         onInput={(e) => setBill(Number(e.target.value))}
       />
       <label>💵Your Expense</label>
       <input
-        type="text"
+        type="number"
         value={paidByUser}
         onInput={(e) =>
           setPaidByUser(
