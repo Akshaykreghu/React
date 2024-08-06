@@ -18,3 +18,24 @@
     max-height: 250px;
     margin-right: 15px;
 }
+
+.small-poster{
+    max-height: 150px;
+    margin-right: 15px;
+}
+
+.poster-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure this matches the height of the parent container */
+  }
+  
+  .youtube-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Optional: adjust as needed */
+    height: 100%; /* Optional: adjust as needed */
+  }
+  

@@ -6,8 +6,8 @@ import "./Banner.css";
 function isset(variable) {
   return typeof variable !== "undefined" && variable !== null;
 }
-function getRandomNumber(){
-  return Math.floor(Math.random()* 21);
+function getRandomNumber() {
+  return Math.floor(Math.random() * 21);
 }
 function Banner() {
   const [movie, setMovie] = useState();
@@ -15,25 +15,19 @@ function Banner() {
     axios
       .get(`trending/all/week?api_key=${API_KEY}&language=en-US`)
       .then((response) => {
-        console.log("RandomNumber", getRandomNumber());
         setMovie(response.data.results[getRandomNumber()]);
+        console.log('Movie', movie);
       });
   }, []);
   return (
     <div
       style={{
-        backgroundImage: movie ? `url(${imageUrl + movie.backdrop_path})`: ""
+        backgroundImage: movie ? `url(${imageUrl + movie.backdrop_path})` : "",
       }}
       className="banner"
     >
       <div className="content">
-        <h1 className="title">
-          {movie
-            ? isset(movie.title)
-              ? movie.title
-              : "Loading...."
-            : "Loading...."}
-        </h1>
+        <h1 className="title">{movie ? movie.title : "Loading...."}</h1>
         <div className="banner_buttons">
           <button className="button">Play</button>
           <button className="button">My list</button>
