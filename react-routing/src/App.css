@@ -1,0 +1,38 @@
+.All{
+  user-select: none;
+}
+
+.App {
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.route-box{
+  width: 80%;
+}
+
+.heading{
+  text-decoration: underline;
+}
+
+.example{
+  border:1px solid black;
+  margin:5px;
+  padding-bottom:10px;
+  border-radius: 8px;
+}
+
+.example-list{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.button-list{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}

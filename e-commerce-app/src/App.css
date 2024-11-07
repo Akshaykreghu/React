@@ -1,0 +1,14 @@
+.App{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh; 
+}
+
+.link-no-decoration{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: auto;
+  }

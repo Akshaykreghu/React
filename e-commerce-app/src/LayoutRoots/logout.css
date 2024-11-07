@@ -1,0 +1,11 @@
+.Logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    flex-direction: column;
+}
+
+.Logout p{
+    font-size: 10px;
+}

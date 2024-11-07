@@ -1,0 +1,11 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #151a1f;
+    margin-bottom: 0px;
+}
+
+.footer h6{
+    margin: 1%;
+}

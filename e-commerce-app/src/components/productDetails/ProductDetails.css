@@ -1,0 +1,30 @@
+.product-details{
+width: auto;
+display: flex;
+justify-content: space-between;
+padding: 10px;
+gap: 5%;
+}
+
+.image{
+    width: 100%;
+}
+
+.image-container{
+    display: block;
+    width: 25%;
+}
+
+.details{
+    width: 100%;
+}
+
+
+.buy-button{
+    display: block;
+}
+
+.home-button{
+    display: block; 
+    margin-top: 1%;
+}
